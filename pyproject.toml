@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-server-template"
+version = "0.1.0"
+description = "A local MCP server for <SERVICE> — integration for Claude"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = [
+    "fastmcp>=2.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+mcp-server-template = "mcp_server_template.server:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+    "pytest-cov>=5.0",
+    "ruff>=0.12.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_server_template"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
