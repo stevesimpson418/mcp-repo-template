@@ -57,7 +57,7 @@ find_and_replace() {
     -not -name 'bootstrap.sh' \
     -print0 \
     | while IFS= read -r -d '' file; do
-      if file --mime-type "$file" | grep -q 'text/'; then
+      if file --mime-type "$file" | grep -qE 'text/|application/json'; then
         if grep -q "$old" "$file" 2>/dev/null; then
           if [[ "$(uname)" == "Darwin" ]]; then
             sed -i '' "s|${old}|${new}|g" "$file"
