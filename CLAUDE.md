@@ -2,7 +2,8 @@
 
 ## Project Overview
 
-This is an MCP (Model Context Protocol) server built with FastMCP. It runs locally via stdio transport and integrates with Claude Desktop and Claude Code.
+This is an MCP (Model Context Protocol) server built with FastMCP. It runs locally via
+stdio transport and integrates with Claude Desktop and Claude Code.
 
 ## Tech Stack
 
