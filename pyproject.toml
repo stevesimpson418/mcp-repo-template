@@ -8,10 +8,16 @@ version = "0.1.0"
 description = "A local MCP server for <SERVICE> — integration for Claude"
 requires-python = ">=3.12"
 license = "MIT"
+readme = "README.md"
 dependencies = [
     "fastmcp>=2.0.0",
     "python-dotenv>=1.0.0",
 ]
+
+[project.urls]
+Repository = "https://github.com/stevesimpson418/mcp-repo-template"
+Issues = "https://github.com/stevesimpson418/mcp-repo-template/issues"
+Changelog = "https://github.com/stevesimpson418/mcp-repo-template/releases"
 
 [project.scripts]
 mcp-server-template = "mcp_server_template.server:main"
