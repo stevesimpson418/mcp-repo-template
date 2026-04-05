@@ -71,7 +71,7 @@ find_and_replace() {
 
 echo "Replacing placeholders..."
 # Order matters: replace compound patterns before their substrings
-find_and_replace "GITHUB_USER/mcp-server-template" "${GITHUB_USER}/${PROJECT_NAME}"
+find_and_replace "stevesimpson418/mcp-repo-template" "${GITHUB_USER}/${PROJECT_NAME}"
 find_and_replace "AUTHOR_NAME" "${AUTHOR_NAME}"
 find_and_replace "mcp-server-template" "${PROJECT_NAME}"
 find_and_replace "mcp_server_template" "${PACKAGE_NAME}"

@@ -1,11 +1,12 @@
 # MCP Server Template
 
-[![CI](https://github.com/GITHUB_USER/mcp-server-template/actions/workflows/ci.yml/badge.svg)](https://github.com/GITHUB_USER/mcp-server-template/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/GITHUB_USER/mcp-server-template/graph/badge.svg)](https://codecov.io/gh/GITHUB_USER/mcp-server-template)
+[![CI](https://github.com/stevesimpson418/mcp-repo-template/actions/workflows/ci.yml/badge.svg)](https://github.com/stevesimpson418/mcp-repo-template/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/stevesimpson418/mcp-repo-template/graph/badge.svg)](https://codecov.io/gh/stevesimpson418/mcp-repo-template)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A local [MCP](https://modelcontextprotocol.io/) server template for building Claude integrations. Runs locally via stdio transport — all tokens and credentials stay on your machine.
+A local [MCP](https://modelcontextprotocol.io/) server template for building Claude integrations. Runs locally via stdio
+transport — all tokens and credentials stay on your machine.
 
 ## Prerequisites
 
@@ -16,7 +17,7 @@ A local [MCP](https://modelcontextprotocol.io/) server template for building Cla
 
 ```bash
 # Clone the repo
-git clone https://github.com/GITHUB_USER/mcp-server-template.git
+git clone https://github.com/stevesimpson418/mcp-repo-template.git
 cd mcp-server-template
 
 # Install dependencies (creates .venv/ in the project directory)
@@ -139,7 +140,7 @@ This renames all placeholders (package name, badges, LICENSE copyright), updates
 This server is currently distributed as source via git. To install:
 
 ```bash
-git clone https://github.com/GITHUB_USER/mcp-server-template.git
+git clone https://github.com/stevesimpson418/mcp-repo-template.git
 cd mcp-server-template
 uv sync
 ```
