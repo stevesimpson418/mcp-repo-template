@@ -52,23 +52,38 @@ Add to your Claude Desktop config (`~/Library/Application Support/Claude/claude_
 }
 ```
 
-## Adding to Claude Code
+## Adding to Claude Code CLI
 
-Add to your Claude Code settings (`.claude/settings.json` or global):
+Use the `claude mcp add` command to register the server. This works from any directory.
 
-```json
-{
-  "mcpServers": {
-    "my-server": {
-      "command": "/absolute/path/to/.venv/bin/python",
-      "args": ["-m", "mcp_server_template.server"],
-      "env": {
-        "API_TOKEN": "your_token_here"
-      }
-    }
-  }
-}
+```bash
+claude mcp add --scope user my-server \
+  --transport stdio \
+  --env API_TOKEN=your_token_here \
+  -- /path/to/my-server/.venv/bin/python -m mcp_server_template.server
 ```
+
+Replace `/path/to/my-server` with the actual path where you cloned the repo.
+
+> **Tip:** Run `uv run which python` from the project directory to get the exact `.venv/bin/python`
+> path for the command.
+
+The `--scope user` flag saves to `~/.claude.json` so the server is available across all projects.
+Without it, the command defaults to local scope (tied to whatever directory you run it from).
+To scope it to a single project instead, use `--scope project` which writes to `.mcp.json` in
+the project root.
+
+To verify the server is registered:
+
+```bash
+claude mcp list
+```
+
+Restart Claude Code after adding. The tools should appear in the `/mcp` menu.
+
+> **Note:** Claude Code CLI uses a different configuration from Claude Desktop. The `claude mcp add`
+> command is the recommended way to register MCP servers — do not add them to
+> `~/.claude/settings.json` as that file is used for permissions and hooks only.
 
 ## Available Tools
 
@@ -122,7 +137,7 @@ config without passing environment variables:
 API_TOKEN=your_token_here
 ```
 
-This is only needed for local development. The Claude Desktop and Claude Code configs
+This is only needed for local development. The Claude Desktop and Claude Code CLI configs
 pass these values directly via the `env` block.
 
 ## Releases
