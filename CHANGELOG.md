@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/stevesimpson418/mcp-repo-template/compare/v0.1.1...v0.1.2) (2026-04-05)
+
+
+### Documentation
+
+* **readme:** update Claude Code CLI setup instructions ([#12](https://github.com/stevesimpson418/mcp-repo-template/issues/12)) ([41b03e3](https://github.com/stevesimpson418/mcp-repo-template/commit/41b03e30988ebd580ca0f023854a9c12feda4980))
+
 ## [0.1.1](https://github.com/stevesimpson418/mcp-repo-template/compare/v0.1.0...v0.1.1) (2026-04-05)
 
 
