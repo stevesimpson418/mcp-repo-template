@@ -125,6 +125,22 @@ API_TOKEN=your_token_here
 This is only needed for local development. The Claude Desktop and Claude Code configs
 pass these values directly via the `env` block.
 
+## Releases
+
+This project uses [release-please](https://github.com/googleapis/release-please) for automated
+versioning and releases. The version is determined by
+[Conventional Commits](https://www.conventionalcommits.org/):
+
+- `fix:` commits bump the **patch** version (e.g. 0.1.0 → 0.1.1)
+- `feat:` commits bump the **minor** version (e.g. 0.1.1 → 0.2.0)
+- `BREAKING CHANGE` in the commit footer bumps the **major** version
+
+When commits land on `main`, release-please opens (or updates) a Release PR that:
+- Bumps the version in `pyproject.toml`
+- Updates `CHANGELOG.md` with grouped entries
+
+Merging the Release PR creates a git tag and GitHub Release automatically.
+
 ## Bootstrapping a New Project
 
 Use `bootstrap.sh` to create a new MCP server from this template:
