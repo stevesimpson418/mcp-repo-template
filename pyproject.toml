@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mcp-server-template"
-version = "0.1.1"
+version = "0.1.2"
 description = "A local MCP server for <SERVICE> — integration for Claude"
 requires-python = ">=3.12"
 license = "MIT"
