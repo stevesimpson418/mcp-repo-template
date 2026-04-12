@@ -24,7 +24,7 @@ mcp-server-template = "mcp_server_template.server:main"
 
 [dependency-groups]
 dev = [
-    "pytest>=8.0",
+    "pytest>=9.0.3",
     "pytest-asyncio>=0.24",
     "pytest-cov>=5.0",
     "ruff>=0.12.0",
