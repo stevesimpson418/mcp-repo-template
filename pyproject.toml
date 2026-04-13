@@ -10,7 +10,7 @@ requires-python = ">=3.12"
 license = "MIT"
 readme = "README.md"
 dependencies = [
-    "fastmcp>=2.0.0",
+    "fastmcp>=3.2.3",
     "python-dotenv>=1.2.2",
 ]
 
